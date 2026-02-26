@@ -1,0 +1,22 @@
+Reflexão Estratégica: Defesa e Mitigação
+A simulação de malwares como Ransomwares e Keyloggers revela que a segurança não pode depender de uma única ferramenta, mas sim de uma estratégia de Defesa em Profundidade (Defense in Depth). Abaixo, detalho as principais medidas de prevenção e defesa:
+
+1. Antivírus e EDR (Endpoint Detection and Response)
+Funcionamento: Evoluíram da simples busca por "assinaturas" de vírus conhecidos para a análise comportamental (heurística).
+
+Aplicação: Um EDR moderno identificaria o script de Ransomware não pelo código em si, mas pelo comportamento anômalo de criptografar centenas de arquivos em poucos segundos, bloqueando o processo preventivamente.
+
+2. Firewall e Segmentação de Rede
+Funcionamento: Atua como um filtro de tráfego. No caso do Keylogger, um firewall bem configurado impediria a exfiltração de dados ao bloquear conexões SMTP (porta 587 ou 465) originadas de estações de trabalho não autorizadas.
+
+Aplicação: Implementar regras de Egress Filtering (filtragem de saída) para garantir que apenas servidores específicos enviem dados para a internet.
+
+3. Sandboxing
+Funcionamento: É um ambiente isolado (caixa de areia) onde arquivos suspeitos são executados para observar seu comportamento sem colocar o sistema real em risco.
+
+Aplicação: Antes de um anexo de e-mail chegar ao usuário, ele é testado em uma Sandbox. Se o arquivo tentar modificar registros do sistema ou arquivos de usuário, ele é descartado.
+
+4. Conscientização do Usuário (Security Awareness)
+Funcionamento: O elo mais fraco da segurança costuma ser o humano. A conscientização foca em treinar o colaborador para identificar vetores de ataque comuns, como Phishing.
+
+Aplicação: Ensinar o usuário a não clicar em links suspeitos ou baixar macros de documentos Office, que são as formas mais comuns de entrada para o Keylogger e o Ransomware simulados neste projeto.
